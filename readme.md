@@ -1,4 +1,9 @@
 # FilFL (ECAI'24)
+
+<img src="diagram_.png" width="1500" height="300" />
+
+
+
 ## 1. Paper Link
 ArXiv: https://arxiv.org/abs/2302.06599
 
