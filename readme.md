@@ -1,6 +1,6 @@
 # FilFL (ECAI'24)
 
-<img src="diagram_.png" width="1500" height="300" />
+<img src="diagram_.png" width="1000" height="200" />
 
 
 
