@@ -1,4 +1,4 @@
-# FilFL (ECAI.24)
+# FilFL (ECAI'24)
 ## 1. Paper Link
 ArXiv: https://arxiv.org/abs/2302.06599
 
