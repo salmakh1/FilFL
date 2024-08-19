@@ -1,4 +1,4 @@
-# FilFL (ECAI'24)
+# FilFL: Client Filtering for Optimized Client Participation in Federated Learning (ECAI'24)
 
 <img src="diagram_.png" width="1000" height="200" />
 
