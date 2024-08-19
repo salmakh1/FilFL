@@ -1,0 +1,5 @@
+_target_: src.data.shakespeare_leaf.Shakespeare
+seed: 42 #42 #32
+num_classes: 80
+batch_size: 64 #16
+data_dir: "os.getcwd()"

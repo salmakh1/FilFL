@@ -1,0 +1,4 @@
+_target_ : fl.train_clients_cifar.trainClientsFL
+num_clients: 200
+m: 3
+available_clients: 30

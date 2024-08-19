@@ -1,0 +1,4 @@
+_target_ : fl.train_clients_femnist.trainClientsFemnist
+num_clients: 190
+m: 5 #10
+available_clients: 50 #100

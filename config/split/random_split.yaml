@@ -1,0 +1,5 @@
+_target_ :  src.data.data_utils.random_split_data_to_clients
+#dataset: ???
+num_clients : ${datamodule.num_clients}
+seed : ${datamodule.seed}
+data_points: 0

@@ -1,0 +1,9 @@
+_target_: fl.client.Client
+
+client_id: ???
+#device: ???
+local_steps: 1 #20
+task: "NLP"
+learning_rate: ${optim.lr}
+batch_size: 64
+topk: False #True #topk: True #should be false with cifar10

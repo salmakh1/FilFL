@@ -1,0 +1,4 @@
+_target_: fl.train_clients_shakespear.trainClientsShakespeare
+num_clients: 133
+m: 10
+available_clients: 100

@@ -1,0 +1,9 @@
+_target_: fl.client.Client
+
+client_id: ???
+#device: ???
+local_steps: 5
+task: "classification"
+learning_rate: ${optim.lr}
+batch_size: 32
+topk: False #True #topk: True #should be false with cifar10

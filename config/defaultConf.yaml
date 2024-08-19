@@ -1,0 +1,106 @@
+defaults:
+  - model: resnet_cifar10 #lstm_shakespeare #resnet_cifar10 #cnnfemnist #resnet #shufflenet #resnet
+  - datamodule: cifar10 #shakespeare #cifar10 #femnist_leaf #cifar10 #openImage #femnist
+  - client_training: client_train_cifar10
+  - logger: wandb
+  - split: dirichlet
+  - criterion: entropyLoss
+  - train_schema: train_cifar #train_cifar_sub #train_femnist_power_of_choice #train_femnist_power_of_choice #train_femnist #train_openImg #train_openImg #train_cifar
+  - filtering: rgl
+  - selection: random
+  - optim: sgd_cifar10
+  - _self_
+##
+
+#DIVFL
+#  - model: resnet_cifar10 #lstm_shakespeare #resnet_cifar10 #cnnfemnist #resnet #shufflenet #resnet
+#  - datamodule: cifar10 #shakespeare #cifar10 #femnist_leaf #cifar10 #openImage #femnist
+#  - client_training: client_train_cifar10
+#  - logger: wandb
+#  - split: dirichlet
+#  - criterion: entropyLoss
+#  - train_schema: train_cifar_divfl #train_cifar_sub #train_femnist_power_of_choice #train_femnist_power_of_choice #train_femnist #train_openImg #train_openImg #train_cifar
+#  - filtering: rgl
+#  - selection: random
+#  - optim: sgd_cifar10
+#  - _self_
+
+
+#cifar_divfl
+#  - model: resnet_cifar10 #lstm_shakespeare #resnet_cifar10 #cnnfemnist #resnet #shufflenet #resnet
+#  - datamodule: cifar10 #shakespeare #cifar10 #femnist_leaf #cifar10 #openImage #femnist
+#  - client_training: client_train_cifar10
+#  - logger: wandb
+#  - split: dirichlet
+#  - criterion: entropyLoss
+#  - train_schema: train_cifar_bandit_divfl #train_cifar_sub #train_femnist_power_of_choice #train_femnist_power_of_choice #train_femnist #train_openImg #train_openImg #train_cifar
+#  - filtering: rgl
+#  - selection: random
+#  - optim: sgd_cifar10
+#  - _self_
+
+
+
+#
+#  - model: resnet_femnist #lstm_shakespeare #resnet_cifar10 #cnnfemnist #resnet #shufflenet #resnet
+#  - datamodule: femnist_leaf #shakespeare #cifar10 #femnist_leaf #cifar10 #openImage #femnist
+#  - client_training: client_train_femnist
+#  - logger: wandb
+#  - split: dirichlet
+#  - criterion: entropyLoss
+#  - train_schema: train_femnist #train_cifar_sub #train_femnist_power_of_choice #train_femnist_power_of_choice #train_femnist #train_openImg #train_openImg #train_cifar
+#  - filtering: rgl
+#  - selection: random
+#  - optim: sgd_femnist
+#  - _self_
+
+#  - model: lstm_shakespeare #lstm_shakespeare #resnet_cifar10 #cnnfemnist #resnet #shufflenet #resnet
+#  - datamodule: shakespeare #shakespeare #cifar10 #femnist_leaf #cifar10 #openImage #femnist
+#  - client_training: client_train_shakespeare
+#  - logger: wandb
+#  - split: dirichlet
+#  - criterion: entropyLoss
+#  - train_schema: train_shakespeare #train_cifar_sub #train_femnist_power_of_choice #train_femnist_power_of_choice #train_femnist #train_openImg #train_openImg #train_cifar
+#  - filtering: rgl
+#  - selection: random
+#  - optim: sgd_shakespeare
+#  - _self_
+
+#
+#  - model: resnet_cifar100 #lstm_shakespeare #resnet_cifar10 #cnnfemnist #resnet #shufflenet #resnet
+#  - datamodule: cifar100 #shakespeare #cifar10 #femnist_leaf #cifar10 #openImage #femnist
+#  - client_training: client_train_cifar100
+#  - logger: wandb
+#  - split: dirichlet
+#  - criterion: entropyLoss
+#  - train_schema: train_cifar100 #train_cifar_sub #train_femnist_power_of_choice #train_femnist_power_of_choice #train_femnist #train_openImg #train_openImg #train_cifar
+#  - filtering: rgl
+#  - selection: random
+#  - optim: sgd_cifar100
+#  - _self_
+
+
+num_clients: ${train_schema.num_clients}
+m: ${train_schema.m}
+available_clients: ${train_schema.available_clients}
+output_dir: ???
+rounds: 400 #250 #1000
+
+
+device: True
+use_wandb: True
+bandit: True
+power: False # True if we run power of choice selection method instead of random
+adversarial: False
+fedprox: False
+randomized: True
+gpus: ???
+periodicity_of_bandit: 5
+environment_change: 5
+divfl: False
+mu: 0.001 # 0.001 for shakespeare
+client_filtering: False
+
+hydra:
+    run:
+        dir: ${output_dir}/train_exp/opt-${hydra.runtime.choices.optim}_model-${hydra.runtime.choices.model}_dm-${hydra.runtime.choices.datamodule}/${now:%Y-%m-%d_%H-%M}

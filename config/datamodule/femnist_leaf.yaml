@@ -1,0 +1,5 @@
+_target_: src.data.femnist_leaf.Femnist
+seed: 52 #52
+num_classes: 62
+batch_size: 10 #16
+data_dir: "os.path.expanduser('~')"

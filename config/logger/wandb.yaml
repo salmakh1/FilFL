@@ -1,0 +1,5 @@
+_target_: wandb.init
+project: test-project #""
+dir: /data/scratch/
+entity: client-selection #""  # set to name of your wandb team
+group: ??? #""

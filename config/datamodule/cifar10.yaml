@@ -1,0 +1,12 @@
+_target_: src.data.cifar_datamodule.CIFARDataModule
+num_classes: 10 #10
+num_workers: 1
+normalize: True
+seed: 32 #42 #32
+batch_size: 32
+shuffle: True
+num_clients: ${num_clients}
+val_split: 0.1
+pub_size: 0.01
+transform: False
+

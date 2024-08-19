@@ -1,0 +1,9 @@
+_target_: fl.client.Client
+
+client_id: ???
+#device: ???
+local_steps: 2   # 5 for cifar10 and 2 for femnist
+task: "classification"
+learning_rate: ${optim.lr}
+batch_size: 16
+topk: False #True #topk: True #should be false with cifar10

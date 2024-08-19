@@ -1,0 +1,2 @@
+_target_: src.model.cifar_model.CNNCifar
+num_classes: 100 #10 #defined later
