@@ -18,7 +18,7 @@ Run:
 
 Before running, you can change the defaultConf.yaml under the config directory. You can specify the model (e.g resnet_cifar10, resnet_femnist, etc.), the datamodule( e.g, cifar10, shakespeare) and all other parameters. 
 
-## 5. Citateion
+## 5. Citation
 
 Please cite our paper if you use our implementation of FilFL:
 
