@@ -1,4 +1,4 @@
-# Filfl (ECAI.24)
+# FilFL (ECAI.24)
 ## 1. Paper Link
 ArXiv: https://arxiv.org/abs/2302.06599
 
@@ -8,7 +8,7 @@ The code requires Python >= 3.6 and PyTorch >= 1.2.0. To install the other depen
 ## 3. Datasets
 This code uses the CIFAR10, Federated Extended MNIST (FEMNIST), Shakespeare datasets.
 
-The CIFAR10, CIFAR100 AND MNIST datasets are downloaded automatically by the torchvision package. 
+The CIFAR10 dataset is downloaded automatically by the torchvision package. 
 FEMNIST and Shakespeare are provided by the LEAF repository, which should be downloaded from https://github.com/TalwalkarLab/leaf/. 
 Then the raw FEMNIST and Shakespeare datasets can be downloaded by following the instructions in LEAF. 
 
